@@ -67,7 +67,7 @@ def create_pdf(content: str, title: str = "Document") -> bytes:
     pdf.cell(0, 10, txt=title, ln=1, align="C")
     pdf.ln(10)
     pdf.multi_cell(0, 10, content)
-    pdf_output = pdf.output(dest="S").encode("utf-8"")  # "latin1" encoding supports special characters
+    pdf_output = pdf.output(dest="S").encode("utf-8")  # "latin1" encoding supports special characters
     return pdf_output
 
 
