@@ -180,6 +180,7 @@ class QuizAgents:
     Explanation: [Detailed explanation of why the correct answer is correct and why the other options are incorrect]
     Separate each QnA pair with "#####".
     Ensure the questions cover a variety of topics and difficulty levels, including conceptual understanding, application-based scenarios, and problem-solving.
+    avoid questions like what is the purpose of the lecture, what is the primary focus of the lecture in context to the course,  What is the purpose of using examples and comparisons between different techniques in the lecture, etc.
     """
         questions_text = self._call_llm(summarized_text[:2000], system_msg)
         blocks = questions_text.split("#####")
